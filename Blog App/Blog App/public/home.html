@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - My Blog</title>
+    <link rel="stylesheet" href="css/modern-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="logo">
+                    <h1>My Blog</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="home.html" class="active">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="add-post.html" class="add-post-link">Add Blog</a></li>
+                    <li><a href="#" onclick="logout()" class="logout-link">Logout</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Welcome to Your Dashboard</h2>
+            <p>Start creating or exploring new blog posts.</p>
+            <div class="dashboard-actions">
+                <a href="add-post.html" class="cta-button"><i class="fas fa-plus"></i> Create New Post</a>
+                <button onclick="window.debugPosts.fullCleanup()" class="secondary-btn" style="margin-left: 10px;">
+                    <i class="fas fa-wrench"></i> Fix Post Issues
+                </button>
+            </div>
+        </section>
+
+        <section class="blog-section">
+            <h3>Your Blog Posts</h3>
+            <div class="blog-container" id="user-posts-container">
+                <!-- Blog posts will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2024 My Blog. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/debug.js"></script>
+</body>
+</html>

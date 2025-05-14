@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - My Blog</title>
+    <link rel="stylesheet" href="css/modern-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="logo">
+                    <h1>My Blog</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="home.html" id="home-link">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li id="login-link"><a href="login.html" class="auth-link login-link">Login</a></li>
+                    <li id="register-link"><a href="register.html" class="auth-link register-link">Register</a></li>
+                    <li id="add-post-btn" style="display: none;"><a href="add-post.html" class="add-post-link">Add Blog</a></li>
+                    <li id="logout-btn" style="display: none;"><a href="#" onclick="logout()" class="logout-link">Logout</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-header">
+            <h2>About Us</h2>
+            <p>Learn more about our mission and the team behind My Blog</p>
+        </section>
+
+        <section class="about-content">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h3>Our Story</h3>
+                        <p>Welcome to My Blog, your go-to destination for insightful articles about technology, web development, and digital innovation. We started this journey with a simple mission: to share knowledge and inspire others in the tech community.</p>
+                        
+                        <h3>Our Mission</h3>
+                        <p>We believe in making technology accessible to everyone. Our goal is to provide high-quality, easy-to-understand content that helps both beginners and experienced developers stay up-to-date with the latest trends and best practices.</p>
+                        
+                        <h3>What We Offer</h3>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check"></i> In-depth tutorials and guides</li>
+                            <li><i class="fas fa-check"></i> Latest tech news and updates</li>
+                            <li><i class="fas fa-check"></i> Best practices and tips</li>
+                            <li><i class="fas fa-check"></i> Community discussions</li>
+                        </ul>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://via.placeholder.com/600x400" alt="About us image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <div class="container">
+                <h3>Our Team</h3>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="https://via.placeholder.com/300x300" alt="Team member">
+                        <h4>John Doe</h4>
+                        <p>Founder & Lead Developer</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://via.placeholder.com/300x300" alt="Team member">
+                        <h4>Jane Smith</h4>
+                        <p>Content Writer</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://via.placeholder.com/300x300" alt="Team member">
+                        <h4>Mike Johnson</h4>
+                        <p>Tech Editor</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2024 My Blog. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

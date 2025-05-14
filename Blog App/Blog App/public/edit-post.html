@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post - My Blog</title>
+    <link rel="stylesheet" href="css/modern-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>My Blog</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="add-post.html" class="add-post-link">Add Blog</a></li>
+                <li><a href="#" onclick="logout()" class="logout-link">Logout</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="add-post-section">
+            <div class="container">
+                <h2>Edit Blog Post</h2>
+                <div id="loading-message" class="loading-spinner">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Loading post data...</p>
+                </div>
+                <form id="edit-post-form" class="post-form" style="display: none;">
+                    <div class="form-group">
+                        <label for="title">Post Title</label>
+                        <input type="text" id="title" name="title" class="form-control" placeholder="Enter a catchy title" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category" name="category" class="form-control" required>
+                            <option value="" disabled>Select a category</option>
+                            <option value="Technology">Technology</option>
+                            <option value="Design">Design</option>
+                            <option value="Programming">Programming</option>
+                            <option value="Lifestyle">Lifestyle</option>
+                            <option value="Education">Education</option>
+                            <option value="Health">Health</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cover-photo">Cover Photo</label>
+                        <div class="current-image-container">
+                            <img id="current-image" src="" alt="Current cover image">
+                            <p>Current cover photo</p>
+                        </div>
+                        <div class="file-input-wrapper">
+                            <input type="file" id="cover-photo" name="cover-photo" accept="image/*">
+                            <p class="form-help">Upload a new image to replace the current one (optional)</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="content">Post Content</label>
+                        <textarea id="content" name="content" class="form-control" rows="10" placeholder="Write your blog post content here..." required></textarea>
+                    </div>
+
+                    <input type="hidden" id="post-id" name="post-id">
+
+                    <div class="form-actions">
+                        <button type="button" class="secondary-btn" onclick="window.location.href='home.html'">Cancel</button>
+                        <button type="submit" class="primary-btn">Update Post</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2024 My Blog. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/edit-post.js"></script>
+</body>
+</html> 
