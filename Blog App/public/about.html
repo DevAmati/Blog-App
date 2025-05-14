@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - My Blog</title>
+    <link rel="stylesheet" href="css/modern-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .about-section {
+            padding: 3rem 0;
+        }
+        
+        .about-section:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        .about-section:nth-child(odd) .about-container {
+            flex-direction: row-reverse;
+        }
+        
+        .about-text,
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #2575fc;
+        }
+        
+        .about-text p {
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: #444;
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .features-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .features-list li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .features-list li i {
+            color: #2575fc;
+            margin-right: 0.8rem;
+        }
+        
+        .team-section {
+            padding: 4rem 2rem;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        
+        .team-section h3 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #2575fc;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .team-member {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+        
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            object-fit: cover;
+        }
+        
+        .team-member h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .team-member p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .team-member .social-icons {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+        }
+        
+        .team-member .social-icons a {
+            color: #2575fc;
+            font-size: 1.2rem;
+            transition: color 0.2s ease;
+        }
+        
+        .team-member .social-icons a:hover {
+            color: #6a11cb;
+        }
+        
+        @media (max-width: 768px) {
+            .about-container {
+                flex-direction: column !important;
+            }
+            
+            .about-text,
+            .about-image {
+                width: 100%;
+            }
+            
+            .team-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="logo">
+                    <h1>My Blog</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="home.html" id="home-link">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li id="login-link"><a href="login.html" class="auth-link login-link">Login</a></li>
+                    <li id="register-link"><a href="register.html" class="auth-link register-link">Register</a></li>
+                    <li id="add-post-btn" style="display: none;"><a href="add-post.html">Add Blog</a></li>
+                    <li id="logout-btn" style="display: none;"><a href="#" onclick="logout()">Logout</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-header">
+            <h2>About Our Blog Platform</h2>
+            <p>Connecting creative minds through storytelling, knowledge sharing, and community building</p>
+        </section>
+
+        <section class="about-section">
+            <div class="about-container">
+                <div class="about-text">
+                    <h3>Our Story</h3>
+                    <p>Welcome to our multi-user blogging platform, a vibrant digital space where ideas flourish and voices resonate. Born from a passion for connection and knowledge sharing, we created this platform to break down barriers between writers and readers.</p>
+                    <p>Since our inception, we've been dedicated to providing a seamless and intuitive blogging experience that empowers creators while engaging audiences. Our journey began with a simple idea: that everyone has stories worth sharing and perspectives worth hearing.</p>
+                </div>
+                <div class="about-image">
+                    <img id="story-image" alt="Our Story - Illustration of blogging journey">
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="about-container">
+                <div class="about-text">
+                    <h3>Our Mission</h3>
+                    <p>We believe in the power of diverse voices and perspectives to enrich our understanding of the world. Our mission is to create a platform where anyone can share their expertise, experiences, and insights without technical barriers.</p>
+                    <p>By providing easy-to-use tools for content creation, engagement through comments and likes, and a vibrant community atmosphere, we aim to foster meaningful connections between writers and readers from all walks of life.</p>
+                </div>
+                <div class="about-image">
+                    <img id="mission-image" alt="Our Mission - Visual representation of our goals">
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="about-container">
+                <div class="about-text">
+                    <h3>What We Offer</h3>
+                    <p>Our platform combines powerful features with an intuitive interface to make blogging accessible to everyone, from novices to experienced content creators.</p>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check-circle"></i> User-friendly content creation with rich media support</li>
+                        <li><i class="fas fa-check-circle"></i> Engagement features like comments and likes</li>
+                        <li><i class="fas fa-check-circle"></i> Personalized profiles to showcase your unique identity</li>
+                        <li><i class="fas fa-check-circle"></i> Content discovery through categories and search</li>
+                        <li><i class="fas fa-check-circle"></i> Responsive design for optimal reading on any device</li>
+                        <li><i class="fas fa-check-circle"></i> Secure user authentication and data protection</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img id="offering-image" alt="What We Offer - Illustration of platform features">
+                </div>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <h3>Meet Our Team</h3>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img id="team-member-1" alt="Emma Wilson - Founder & Lead Developer">
+                    <h4>Emma Wilson</h4>
+                    <p>Founder & Lead Developer</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img id="team-member-2" alt="Alex Martinez - UX Designer">
+                    <h4>Alex Martinez</h4>
+                    <p>UX Designer</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img id="team-member-3" alt="Sam Johnson - Content Strategist">
+                    <h4>Sam Johnson</h4>
+                    <p>Content Strategist</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-medium"></i></a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img id="team-member-4" alt="Maya Patel - Community Manager">
+                    <h4>Maya Patel</h4>
+                    <p>Community Manager</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2024 My Blog. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Load image generation scripts -->
+    <script src="images/about/about.js"></script>
+    <script src="images/about/team.js"></script>
+    
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+    
+    <!-- Generate and insert images dynamically -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Generate story image
+            const storyCanvas = AboutImageGenerator.generateStoryImage(600, 400);
+            document.getElementById('story-image').src = storyCanvas.toDataURL();
+            
+            // Generate mission image
+            const missionCanvas = AboutImageGenerator.generateMissionImage(600, 400);
+            document.getElementById('mission-image').src = missionCanvas.toDataURL();
+            
+            // Generate offering image
+            const offeringCanvas = AboutImageGenerator.generateOfferingImage(600, 400);
+            document.getElementById('offering-image').src = offeringCanvas.toDataURL();
+            
+            // Generate team member avatars with different colors
+            const colors = ['#4A90E2', '#E67E22', '#27AE60', '#8E44AD'];
+            const teamMembers = [
+                { name: 'Emma Wilson', role: 'Founder & Lead Developer' },
+                { name: 'Alex Martinez', role: 'UX Designer' },
+                { name: 'Sam Johnson', role: 'Content Strategist' },
+                { name: 'Maya Patel', role: 'Community Manager' }
+            ];
+            
+            teamMembers.forEach((member, index) => {
+                const canvas = document.createElement('canvas');
+                canvas.width = 300;
+                canvas.height = 300;
+                const ctx = canvas.getContext('2d');
+                
+                // Fill with color
+                ctx.fillStyle = colors[index];
+                ctx.fillRect(0, 0, 300, 300);
+                
+                // Get avatar
+                const avatar = generateTeamAvatar(member.name, 300, 300, colors[index]);
+                document.getElementById(`team-member-${index + 1}`).src = avatar;
+            });
+        });
+    </script>
+</body>
+</html> 
